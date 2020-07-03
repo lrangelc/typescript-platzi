@@ -8,9 +8,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 import { PlayerService } from './services/player.service';
+import { TeamTableComponent } from './team-table/team-table.component';
+import { PlayerTableComponent } from './player-table/player-table.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TeamTableComponent, PlayerTableComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

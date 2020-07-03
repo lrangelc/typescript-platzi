@@ -4,16 +4,16 @@ import { Team } from '../interfaces/team';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+export const TeamsTableHeaders = ['Name', 'Country', 'Players'];
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TeamService {
   private teamsDb: AngularFireList<Team>;
 
   constructor(private db: AngularFireDatabase) {
-    this.teamsDb = this.db.list('/teams', (ref) =>
-      ref.orderByChild('name')
-    );
+    this.teamsDb = this.db.list('/teams', (ref) => ref.orderByChild('name'));
   }
 
   getTeams(): Observable<Team[]> {
