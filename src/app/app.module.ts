@@ -7,17 +7,17 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+import { PlayerService } from './services/player.service';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [PlayerService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
