@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "typescript-platzi"
+    }
+  },
+  "defaultProject": "typescript-platzi",
+  "cli": {
+    "analytics": "5b7092e1-1757-4494-9276-a0746008fafb"
+  }
 }
